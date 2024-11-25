@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #646161;
+  }
+  
+  .header-image {
+    background-image: url('https://www.pizzaexpress.vn/wp-content/uploads/2021/03/tinh-hoa-am-thuc-viet-nam-1_1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    position: relative;
+    color: white;
+    text-align: center;
+  }
+  
+  .header-content {
+    text-align: center;
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    top: 280px; /* Khoảng cách từ viền trên, bạn có thể điều chỉnh giá trị này */
+    left: 11%; /* Khoảng cách từ viền trái, có thể thay đổi tùy theo ý thích */
+    transform: translateY(-50%); /* Căn giữa dọc nội dung tiêu đề */
+    width: 80%;
+  }
+  
+  .header-content h1 {
+    margin-bottom: 10px;
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* Kiểu chữ mô tả ngắn */
+  .header-content p {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: white;
+  }
+  
+  .nav-bar {
+    font-weight: bold;
+    border-bottom: 1px solid #ddd ;
+    padding: 20px 0px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    gap: 15px;
+    background-color: transparent; /* Nền trong suốt */
+    z-index: 1000;
+    color: white;
+    transition: background-color 0.3s ease, padding 0.3s ease; /* Hiệu ứng chuyển màu và thay đổi kích thước */
+  }
+
+  .nav-bar.scrolled {
+    background-color: #333; /* Màu nền khi cuộn xuống */
+    border-bottom: 1px solid #333;
+    padding: 10px 0px; /* Giảm padding để thu nhỏ thanh điều hướng */
+}
+  
+  .nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-bar a:hover {
+    text-decoration: underline;
+  }
+  
+  .content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .dish {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dish img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Tạo hiệu ứng chuyển động mượt */
+  }
+  
+  .dish img:hover {
+    transform: scale(1.1); /* Phóng to ảnh khi di chuột vào */
+    opacity: 0.8;
+}
+
+  .dish-info {
+    padding: 15px;
+  }
+  
+  .dish-info h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .dish-info p {
+    color: #666;
+  }
+  .btn-more {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-more:hover {
+    background-color: #555;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #ddd;
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+  }
